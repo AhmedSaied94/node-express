@@ -1,0 +1,27 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "description": "node+express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedSaied94/node-express.git"
+  },
+  "author": "Ahmed Saied",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedSaied94/node-express/issues"
+  },
+  "homepage": "https://github.com/AhmedSaied94/node-express#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
