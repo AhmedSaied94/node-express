@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    name:{
+    joinDate:{
         type:Date,
         default:Date.now
     }
