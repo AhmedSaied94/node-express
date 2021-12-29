@@ -43,6 +43,7 @@
 </html> -->
 <div class="row mt-5">
     <div class="col-12 col-sm-6 offset-sm-3">
+        <%- include('partials/messegs.ejs') %>
         <form class="mx-auto" action="/users/login" method="POST">
             <fieldset>
             <div class="form-group">
@@ -55,7 +56,7 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="d-grid gap-2 mt-4">
-            <button type="submit" class="btn btn-primary btn-lg ">Login</button>
+            <button type="submit" class="btn btn-dark btn-lg ">Login</button>
             </div>
             </fieldset>
             

@@ -7,3 +7,17 @@
     <% }) %>
 
 <% } %>
+
+<% if(success_msg != '') { %>
+    <div class="alert alert-dismissible alert-success mb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <%= success_msg %>
+    </div>
+<% } %>
+
+<% if(err_msg != '') { %>
+    <div class="alert alert-dismissible alert-danger mb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <%= err_msg %>
+    </div>
+<% } %>

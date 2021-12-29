@@ -60,13 +60,18 @@ router.post('/register', (req, res) => {
                     bCrypt.hash(newUser.password, salt, (err, hash) => {
                         if(err) throw err;
                         newUser.password = hash
+
+                        //save user to db
+                        newUser.save()
+                        .then(user => {
+                            req.flash('success_msg', 'registered successfully')
+                            res.redirect('/users/login')
+                        })
+                        .catch(err => console.log(err))
                     })
                 })
 
-                //save user to db
-                newUser.save()
-                .then(user => res.render('login'))
-                .catch(err => console.log(err))
+
 
             }
         })
