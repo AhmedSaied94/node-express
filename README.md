@@ -1,6 +1,6 @@
 # node-express-passport-auth
 node.js , express.js and passport.js Authentication project using local strategy
-<br>
+<br><br><br>
 used packages :
 <br>
 -express.js
@@ -20,7 +20,7 @@ used packages :
 -mongoose
 <br>
 -bcrypt.js
-<br><br><br><br><br>
+<br><br><br>
 --to try project--
 <br>
 clone the project
