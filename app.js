@@ -1,3 +1,5 @@
+//load modules
+
 const fs = require('fs')
 const path = require('path');
 const url = require('url')
@@ -8,16 +10,22 @@ const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('connect-flash')
+const passport = require('passport')
 
 
-//connect db
-
+//db config
 const db = require('./config/keys').MongoURI
+
+//connect to mongoose db
 mongoose.connect(db, { useNewUrlParser:true, useUnifiedTopology: true })
 .then(() => console.log('connected to mongodb'))
 .catch(err => console.log(err))
 
-//implement ejs as middleware
+//passport config
+require('./config/passport')(passport)
+
+
+//implement ejs and express layouts as middleware
 app.use(expressLayouts)
 app.set('view engine', 'ejs');
 
@@ -31,6 +39,11 @@ app.use(session({
   saveUninitialized: true,
 }))
 
+//passport middlewares
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 //connect flash
 app.use(flash())
 
@@ -38,6 +51,7 @@ app.use(flash())
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.err_msg = req.flash('err_msg')
+    res.locals.error = req.flash('error')
     next()
 })
 
