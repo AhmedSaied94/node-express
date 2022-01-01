@@ -21,7 +21,7 @@ router.post('/register', (req, res) => {
     errors.push({msg:'please fill all fields'})
 
     //validate passwords match
-    if(password!==password2)
+    if(name && email && password && password2 && password!==password2)
     errors.push({msg:"passwords didn't match"})
 
     if(password && password.length < 8)
