@@ -7,9 +7,9 @@ used packages :
 <br>
 -ejs
 <br>
--express layouts
+-express-ejs-layouts
 <br>
--express session
+-express-session
 <br>
 -connect-flash
 <br>
