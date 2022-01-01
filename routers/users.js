@@ -46,7 +46,8 @@ router.post('/register', (req, res) => {
                     name,
                     email,
                     password,
-                    password2
+                    password2,
+                    req
                 })
             }else{
                 //create new user
