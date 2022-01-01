@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/AhmedSaied94/node-express/issues"
   },
-  "homepage": "https://github.com/AhmedSaied94/node-express#readme",
+  "homepage": "https://node-express-passport-auth.herokuapp.com/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",

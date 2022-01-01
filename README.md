@@ -26,3 +26,7 @@ used packages :
 clone the project
 <br>
 and run npm install then npm run dev
+<br><br><br>
+live view
+<br>
+https://node-express-passport-auth.herokuapp.com/
